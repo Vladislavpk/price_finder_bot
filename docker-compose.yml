@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  price_finder_bot:
+    build:
+      context: C:\project\price_finder_bot
+      dockerfile: C:\project\price_finder_bot\Dockerfile
+    volumes:
+      - C:\project\price_finder_bot:/srv/price_finder_bot
