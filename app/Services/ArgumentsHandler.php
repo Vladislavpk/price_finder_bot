@@ -5,7 +5,7 @@ namespace app\Services;
 class ArgumentsHandler
 {
     private static self $instance;
-    private array $arguments;
+    public array $arguments;
     private function __construct()
     {
         $this->readArguments();
@@ -45,4 +45,15 @@ class ArgumentsHandler
     {
         return $this->getArguments()["input_file"] ?? null;
     }
+
+    public function getMode(): ?string
+    {
+        return $this->getArguments()["mode"] ?? null;
+    }
+
+    public function getOutputFilePath(): ?string
+    {
+        return $this->getArguments()["output_file"] ?? null;
+    }
+
 }
